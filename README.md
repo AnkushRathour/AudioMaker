@@ -51,9 +51,11 @@ audiomaker --input file.txt --output file.mp3 --chunk_size 3000 --voice en-US-Ar
 
 - temp_dir Directory for temporary audio chunks audio_parts
 
-2️⃣ Python API from audiomaker import text_to_audio
+2️⃣ Python API
 
 ```bash
+from audiomaker import text_to_audio
+
 # Load text from file
 with open("file.txt", "r", encoding="utf-8") as f:
     text = f.read()
