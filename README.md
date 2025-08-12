@@ -1,5 +1,9 @@
 # 🎙️ AudioMaker
 
+[![PyPI version](https://badge.fury.io/py/audiomaker.svg)](https://pypi.org/project/audiomaker/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Python Version](https://img.shields.io/pypi/pyversions/audiomaker)](https://pypi.org/project/audiomaker/)
+
 **AudioMaker** is a Python package for generating **seamless, long-form audio** from massive text inputs.  
 Unlike traditional TTS tools, AudioMaker can handle **book-length content** (even 4+ hours) by **splitting text into chunks**, synthesizing each chunk, and merging them into a single audio file.
 
