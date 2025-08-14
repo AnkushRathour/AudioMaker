@@ -1,8 +1,9 @@
 # 🎙️ AudioMaker
 
 [![PyPI version](https://badge.fury.io/py/audiomaker.svg)](https://pypi.org/project/audiomaker/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+![Release Version](https://img.shields.io/github/v/release/ankushrathour/audiomaker)
 [![Python Version](https://img.shields.io/pypi/pyversions/audiomaker)](https://pypi.org/project/audiomaker/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 **AudioMaker** is a Python package for generating **seamless, long-form audio** from massive text inputs.  
 Unlike traditional TTS tools, AudioMaker can handle **book-length content** (even 4+ hours) by **splitting text into chunks**, synthesizing each chunk, and merging them into a single audio file.
@@ -38,22 +39,18 @@ pip install -e .
 ```bash
 audiomaker --input file.txt --output file.mp3 --chunk_size 3000 --voice en-US-AriaNeural
 ```
+| Flag        | Description                      | Default             |
+|-------------|----------------------------------|---------------------|
+| `--input`   | Path to input text file          | (required)          |
+| `--output`  | Path to save final audio         | `output.mp3`        |
+| `--chunk_size` | Number of words per chunk     | `3000`              |
+| `--voice`   | Microsoft Edge-TTS voice name    | `en-US-AriaNeural`  |
+| `--temp_dir`| Temporary audio chunk directory  | `audio_parts`       |
 
-####  Arguments:
-######  Flag Description Default
-- input Path to input text file Required
-
-- output Path to save final audio output.mp3
-
-- chunk_size Number of words per TTS chunk 3000
-
-- voice Edge-TTS voice name en-US-AriaNeural
-
-- temp_dir Directory for temporary audio chunks audio_parts
 
 2️⃣ Python API
 
-```bash
+```python
 from audiomaker import text_to_audio
 
 # Load text from file
